@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio Alexey Miagkikh" />
+  <title>Portfolio — Alexey Miagkikh</title>
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Hero -->
+  <header class="hero" id="home" role="banner">
+    <h1>Alexey Miagkikh</h1>
+    <p>Java / Frontend — Portfolio</p>
+  </header>
+
+  <!-- Навигация -->
+  <nav class="nav" aria-label="Основная навигация">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="На главную" title="Вверх">AM</a>
+
+      <div class="nav-right">
+        <div class="nav-links" id="nav-menu">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#tech">Technologies</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему" aria-pressed="false" title="Switch theme">🌙</button>
+
+        <button class="burger" id="burger"
+                aria-label="Открыть меню"
+                aria-controls="nav-menu"
+                aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Приветственный блок (без alert и подсказок) -->
+  <section class="greet card" aria-labelledby="greet-title">
+    <h2 id="greet-title" class="sr-only">Greeting</h2>
+    <p id="greeting-text" class="greet-text">Добро пожаловать!</p>
+
+    <label for="name-input" class="greet-label">Введите имя:</label>
+    <div class="greet-row">
+      <input id="name-input" class="greet-input" type="text" placeholder="Ваше имя" autocomplete="name" />
+      <button id="save-name" class="greet-btn" type="button" aria-label="Сохранить имя">Сохранить</button>
+      <button id="clear-name" class="greet-btn ghost" type="button" aria-label="Очистить имя">Сброс</button>
+    </div>
+  </section>
+
+  <!-- Основной контент -->
+  <main id="main" tabindex="-1">
+    <section id="about" aria-labelledby="h-about">
+      <h2 id="h-about">About</h2>
+      <p>Я студент колледжа из Бишкека и начинающий Java-разработчик. Делаю проекты на Java/JavaFX и Spring Boot, параллельно развиваю фронтенд (HTML, CSS, JS, React). Цель — вырасти в full-stack инженера, собрать сильное портфолио и писать понятный, поддерживаемый код.</p>
+    </section>
+
+    <section id="projects" aria-labelledby="h-projects">
+      <h2 id="h-projects">Projects</h2>
+      <ul class="projects-list">
+        <li><a href="https://github.com/AlexeyMiagkikh/MediaPlayer2Attempt" target="_blank" rel="noopener">Media Player</a></li>
+        <li><a href="https://github.com/AlexeyMiagkikh/spring-boot-guide-main" target="_blank" rel="noopener">Spring Boot Guide</a></li>
+        <li><a href="https://github.com/AlexeyMiagkikh/PhysicsGeomOpticsProject" target="_blank" rel="noopener">Physics Geom Optics</a></li>
+        <li><a href="https://github.com/AlexeyMiagkikh/AlexeyColoredPictureProject" target="_blank" rel="noopener">Colored Picture Project</a></li>
+        <li><a href="https://github.com/AlexeyMiagkikh/AlexeySaleProductAnalyzerProject" target="_blank" rel="noopener">Sale Product Analyzer</a></li>
+        <li><a href="https://github.com/AlexeyMiagkikh/backend_project_leha" target="_blank" rel="noopener">backend_project_leha</a></li>
+        <li><a href="https://github.com/AlexeyMiagkikh/FloppaClicker" target="_blank" rel="noopener">FloppaClicker</a></li>
+        <li><a href="https://github.com/AlexeyMiagkikh/RPG_Game1" target="_blank" rel="noopener">RPG_Game1</a></li>
+      </ul>
+    </section>
+
+    <section id="tech" aria-labelledby="h-tech">
+      <h2 id="h-tech">Technologies</h2>
+      <div class="tech-grid" role="list">
+        <div class="tech-item" role="listitem"><div class="tech-emoji">🌐</div><div class="tech-name">HTML</div></div>
+        <div class="tech-item" role="listitem"><div class="tech-emoji">🎨</div><div class="tech-name">CSS</div></div>
+        <div class="tech-item" role="listitem"><div class="tech-emoji">⚡</div><div class="tech-name">JavaScript</div></div>
+        <div class="tech-item" role="listitem"><div class="tech-emoji">⚛️</div><div class="tech-name">React</div></div>
+        <div class="tech-item" role="listitem"><div class="tech-emoji">🐳</div><div class="tech-name">Docker</div></div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">Contact</h2>
+      <p>
+        Телефон: <a href="tel:+996555353525">+996 555 35 35 25</a><br/>
+        Email: <a href="mailto:m.alex2018@mail.ru">m.alex2018@mail.ru</a><br/>
+        GitHub: <a href="https://github.com/AlexeyMiagkikh" target="_blank" rel="noopener">github.com/AlexeyMiagkikh</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Alexey Miagkikh</footer>
+
+  <!-- Скрипты -->
+  <script src="script.js"></script>
+</body>
+</html>
